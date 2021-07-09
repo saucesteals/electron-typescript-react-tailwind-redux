@@ -19,5 +19,5 @@
       "@components/*": ["./src/render/components/*"]
     }
   },
-  "include": ["src/**/*", "assets/**/*", "bridges/**/*"]
+  "include": ["src/**/*", "assets/**/*", "bridges/**/*", "global.d.ts"]
 }

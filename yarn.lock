@@ -240,7 +240,7 @@
     "@babel/plugin-transform-react-jsx-development" "^7.14.5"
     "@babel/plugin-transform-react-pure-annotations" "^7.14.5"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.12.1":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.9.2":
   version "7.14.6"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.6.tgz#535203bc0892efc7dec60bdc27b2ecf6e409062d"
   integrity sha512-/PCB2uJ7oM44tz8YhC4Z/6PeOKXp4K588f+5M3clr1M4zbqztlo0XEfJ2LEzj/FgwfgGcIdl8n7YYjTCI0BYwg==
@@ -757,6 +757,11 @@
   integrity sha512-X50R97SiDNTpOckiplghBo63Vo8GxSsr98s3VTwEu3qyVr+TY4I91KRtKelEj2OAfgMnkTymw89+psFVq8aB1g==
   dependencies:
     sourcemap-codec "^1.4.4"
+
+"@msgpack/msgpack@^2.6.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@msgpack/msgpack/-/msgpack-2.7.0.tgz#3a0fbe4e0406f6576895f990857e19da97376f18"
+  integrity sha512-mlRYq9FSsOd4m+3wZWatemn3hGFZPWNJ4JQOdrir4rrMK2PyIk26idKBoUWrqF3HJJHl+5GpRU+M0wEruJwecg==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -6038,6 +6043,18 @@ reduce-css-calc@^2.1.8:
     css-unit-converter "^1.1.1"
     postcss-value-parser "^3.3.0"
 
+redux-persist@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/redux-persist/-/redux-persist-6.0.0.tgz#b4d2972f9859597c130d40d4b146fecdab51b3a8"
+  integrity sha512-71LLMbUq2r02ng2We9S215LtPu3fY0KgaGE0k8WRgl6RkqxtGfl7HUozz1Dftwsb0D/5mZ8dwAaPbtnzfvbEwQ==
+
+redux@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-4.1.0.tgz#eb049679f2f523c379f1aff345c8612f294c88d4"
+  integrity sha512-uI2dQN43zqLWCt6B/BMGRMY6db7TTY4qeHHfGeKb3EOhmOKjU3KdWvNLJyqaHRksv/ErdNH7cFZWg9jXtewy4g==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+
 regenerator-runtime@^0.13.4:
   version "0.13.7"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.7.tgz#cac2dacc8a1ea675feaabaeb8ae833898ae46f55"
@@ -6321,6 +6338,14 @@ schema-utils@^3.0.0:
     "@types/json-schema" "^7.0.7"
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
+
+secure-electron-store@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/secure-electron-store/-/secure-electron-store-3.0.1.tgz#a71efe3c5d0f37eb2e9362678e266e3e5023a68e"
+  integrity sha512-44NPaeuWR3hdgr/b/GnMQqgUVRlNfIOeBUogfeJA9tjERhkKcCgL5oRSRs5jp0nPQyV26C4N/dgrBwhWlHtRlg==
+  dependencies:
+    "@msgpack/msgpack" "^2.6.0"
+    process "^0.11.10"
 
 select-hose@^2.0.0:
   version "2.0.0"

@@ -1,5 +1,5 @@
-import ReactLogo from "@assets/icons/react.png";
-import TestSvg from "@assets/icons/test.svg";
+import ReactLogo from '@assets/icons/react.png';
+import TestSvg from '@assets/icons/test.svg';
 
 const HomePage = () => {
   return (
