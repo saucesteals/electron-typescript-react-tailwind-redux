@@ -4,16 +4,16 @@ import React from "react";
 import HomePage from "@containers/HomePage";
 
 const Routes = () => {
-	return (
-		<>
-			<Router>
-				<Switch>
-					<Route exact path="/" component={HomePage} />
-					<Route exact path={RouterPaths.HOME} component={HomePage} />
-				</Switch>
-			</Router>
-		</>
-	);
+  return (
+    <>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path={RouterPaths.HOME} component={HomePage} />
+        </Switch>
+      </Router>
+    </>
+  );
 };
 
 export default Routes;

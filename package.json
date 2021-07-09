@@ -74,6 +74,7 @@
     "@marshallofsound/webpack-asset-relocator-loader": "^0.5.0",
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9",
+    "@types/react-router-dom": "^5.1.8",
     "@typescript-eslint/parser": "^4.0.1",
     "autoprefixer": "^10.2.6",
     "babel-loader": "^8.2.2",
@@ -95,6 +96,7 @@
     "electron-squirrel-startup": "^1.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
     "tsconfig-paths-webpack-plugin": "^3.5.1"
   }
 }
