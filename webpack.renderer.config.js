@@ -24,11 +24,6 @@ module.exports = {
 			new TsconfigPathsPlugin({
 				baseUrl: ".",
 			}),
-			// prettier-ignore
-
-			new webpack.ProvidePlugin({
-				"React": "react",
-			}),
 		],
 	},
 };
