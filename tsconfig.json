@@ -16,7 +16,6 @@
       "@/*": ["./src/*"],
       "@assets/*": ["./assets/*"],
       "@utils/*": ["./src/utils/*"],
-      "@utils/": ["src/utils/bridge.ts"],
       "@containers/*": ["./src/containers/*"]
     }
   },
