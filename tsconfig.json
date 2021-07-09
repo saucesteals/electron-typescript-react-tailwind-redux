@@ -14,7 +14,10 @@
 		"paths": {
 			"*": ["node_modules/*"],
 			"@/*": ["./src/*"],
-			"@assets/*": ["./assets/*"]
+			"@assets/*": ["./assets/*"],
+			"@utils/*": ["./src/utils/*"],
+			"@utils/": ["./src/utils/index.ts"],
+			"@containers/*": ["./src/containers/*"]
 		}
 	},
 	"include": ["src/**/*", "assets/*"]
