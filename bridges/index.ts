@@ -1,6 +1,7 @@
 const { ipcRenderer, contextBridge } = require('electron');
 const fs = require('fs');
-const Store = require('secure-electron-store').default;
+const Store = require('s').default;
+import { createStoreBindings } from 'electron-persist-secure';
 
 export const electronBridge = {
   quit: () => {
@@ -18,7 +19,7 @@ export const electronBridge = {
 contextBridge.exposeInMainWorld('electron', electronBridge);
 
 // Create the electron store to be made available in the renderer process
-const store = new Store({ encrypt: false, minify: false });
+const store = new Store();
 
 export const storeBridge = {
   store: store.preloadBindings(ipcRenderer, fs),
