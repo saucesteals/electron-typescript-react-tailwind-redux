@@ -9,7 +9,9 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "eslint --ext .ts ."
+    "lint": "eslint --ext .ts .",
+    "prepare": "husky install",
+    "commit": "cz"
   },
   "keywords": [],
   "author": {
@@ -18,11 +20,17 @@
   },
   "license": "MIT",
   "config": {
-    "forge": "./forge.config.js"
+    "forge": "./forge.config.js",
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog",
+      "defaultScope": "global"
+    }
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-react": "^7.14.5",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@electron-forge/cli": "^6.0.0-beta.57",
     "@electron-forge/maker-deb": "^6.0.0-beta.57",
     "@electron-forge/maker-rpm": "^6.0.0-beta.57",
@@ -36,11 +44,13 @@
     "@typescript-eslint/parser": "^4.0.1",
     "autoprefixer": "^10.2.6",
     "babel-loader": "^8.2.2",
+    "commitizen": "^4.2.4",
     "css-loader": "^5.0.0",
     "electron": "13.1.6",
     "eslint": "^7.6.0",
     "file-loader": "^6.2.0",
     "fork-ts-checker-webpack-plugin": "^6.0.1",
+    "husky": "^7.0.1",
     "node-loader": "^2.0.0",
     "postcss": "^8.3.5",
     "postcss-loader": "^6.1.1",
