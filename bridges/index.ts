@@ -1,6 +1,4 @@
 const { ipcRenderer, contextBridge } = require('electron');
-const fs = require('fs');
-const Store = require('s').default;
 import { createStoreBindings } from 'electron-persist-secure';
 
 export const electronBridge = {
@@ -18,15 +16,12 @@ export const electronBridge = {
 
 contextBridge.exposeInMainWorld('electron', electronBridge);
 
-// Create the electron store to be made available in the renderer process
-const store = new Store();
+export const storeBridge = createStoreBindings();
 
-export const storeBridge = {
-  store: store.preloadBindings(ipcRenderer, fs),
-};
+console.log('Created bindings');
 
 // Expose protected methods that allow the renderer process to use
 // the ipcRenderer without exposing the entire object
-contextBridge.exposeInMainWorld('api', {
-  store: store.preloadBindings(ipcRenderer, fs),
+contextBridge.exposeInMainWorld('store', {
+  ...storeBridge,
 });

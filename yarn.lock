@@ -2698,7 +2698,7 @@ electron-packager@^15.0.0:
 
 "electron-persist-secure@https://github.com/saucesteals/electron-persist-secure":
   version "1.0.0"
-  resolved "https://github.com/saucesteals/electron-persist-secure#b81acde4a81c9a8e6650cbf0f8b64232fb683e7e"
+  resolved "https://github.com/saucesteals/electron-persist-secure#e5210620abcccc1091de1a00188fe03a56cdc4d8"
   dependencies:
     conf "^10.0.1"
 

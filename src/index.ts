@@ -1,7 +1,7 @@
-import { app, BrowserWindow, ipcMain } from 'electron';
-import fs from 'fs';
+import { app, BrowserWindow } from 'electron';
 import isDev from 'electron-is-dev';
-import Store from 'secure-electron-store';
+
+import Store from 'electron-persist-secure/dist/Store';
 
 // Import all IPCs to make sure they register their respective listeners
 import './app/ipc/main';
@@ -12,7 +12,6 @@ import './app/ipc/main';
 // whether you're running in development or production).
 declare const MAIN_WINDOW_WEBPACK_ENTRY: string;
 declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string;
-var mainStore: any;
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
@@ -31,7 +30,6 @@ const createWindow = (): void => {
       contextIsolation: true,
       nodeIntegration: false,
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
-      additionalArguments: [`storePath:${userDataPath}`],
     },
     // to disable the top bar / frame completely uncomment the next line -
     // if you do this you will have to set up a css class to allow certain parts of your app to be "draggable"
@@ -39,12 +37,9 @@ const createWindow = (): void => {
     // frame: false
   });
 
-  mainStore = new Store({
-    path: userDataPath,
-    encrypt: false,
-    minify: false,
+  new Store({
+    cwd: userDataPath,
   });
-  mainStore.mainBindings(ipcMain, mainWindow, fs);
 
   // and load the index.html of the app.
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
@@ -66,8 +61,6 @@ app.on('ready', createWindow);
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
-  } else {
-    mainStore.clearMainBindings(ipcMain);
   }
 });
 
