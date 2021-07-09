@@ -15,9 +15,9 @@
       "*": ["node_modules/*"],
       "@/*": ["./src/*"],
       "@assets/*": ["./assets/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@containers/*": ["./src/containers/*"]
+      "@containers/*": ["./src/render/containers/*"],
+      "@components/*": ["./src/render/components/*"]
     }
   },
-  "include": ["src/**/*", "assets/*", "bridges/*"]
+  "include": ["src/**/*", "assets/**/*", "bridges/**/*"]
 }

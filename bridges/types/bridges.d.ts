@@ -1,4 +1,4 @@
-import { electronBridge } from ".";
+import { electronBridge } from "..";
 
 declare global {
   interface Window {
