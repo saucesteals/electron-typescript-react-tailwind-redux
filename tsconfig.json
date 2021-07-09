@@ -1,24 +1,24 @@
 {
-	"compilerOptions": {
-		"allowJs": true,
-		"module": "commonjs",
-		"jsx": "react",
-		"skipLibCheck": true,
-		"esModuleInterop": true,
-		"noImplicitAny": true,
-		"sourceMap": true,
-		"baseUrl": ".",
-		"outDir": "dist",
-		"moduleResolution": "node",
-		"resolveJsonModule": true,
-		"paths": {
-			"*": ["node_modules/*"],
-			"@/*": ["./src/*"],
-			"@assets/*": ["./assets/*"],
-			"@utils/*": ["./src/utils/*"],
-			"@utils/": ["./src/utils/index.ts"],
-			"@containers/*": ["./src/containers/*"]
-		}
-	},
-	"include": ["src/**/*", "assets/*"]
+  "compilerOptions": {
+    "allowJs": true,
+    "module": "commonjs",
+    "jsx": "react",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "paths": {
+      "*": ["node_modules/*"],
+      "@/*": ["./src/*"],
+      "@assets/*": ["./assets/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@utils/": ["./src/utils/index.ts"],
+      "@containers/*": ["./src/containers/*"]
+    }
+  },
+  "include": ["src/**/*", "assets/*"]
 }

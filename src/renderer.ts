@@ -26,9 +26,15 @@
  * ```
  */
 
+import ReactDOM from "react-dom";
+import React from "react";
+import App from "./App";
 import "./index.css";
-import "./App.tsx";
 
-console.log(
-	'👋 This message is being logged by "renderer.ts", included via webpack'
-);
+function render() {
+  ReactDOM.render(App(), document.getElementById("root"));
+}
+
+render();
+
+console.log('👋 This message is being logged by "renderer.ts", included via webpack');
