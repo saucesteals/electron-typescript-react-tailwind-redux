@@ -16,9 +16,8 @@
       "@/*": ["./src/*"],
       "@assets/*": ["./assets/*"],
       "@utils/*": ["./src/utils/*"],
-      "@utils/": ["./src/utils/index.ts"],
       "@containers/*": ["./src/containers/*"]
     }
   },
-  "include": ["src/**/*", "assets/*"]
+  "include": ["src/**/*", "assets/*", "bridges/*"]
 }
