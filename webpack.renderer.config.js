@@ -24,7 +24,6 @@ module.exports = {
 			new TsconfigPathsPlugin({
 				baseUrl: ".",
 			}),
-			// prettier-ignore
 		],
 	},
 };
