@@ -1,19 +1,13 @@
 import { createStore } from 'redux';
 import { persistReducer, persistStore } from 'redux-persist';
 import reducers from './reducers';
-import {
-  writeConfigRequest,
-  writeConfigResponse,
-  readConfigResponse,
-  readConfigRequest,
-} from 'secure-electron-store';
 
 const persistConfig = {
   key: 'root',
   storage: {
     getItem: (key: string) => {
       return new Promise((resolve, reject) => {
-        window.api.store.onReceive(readConfigResponse, function (args: any) {
+        window.api.store.onReceive('ReadConfig-Response', function (args: any) {
           if (args.key !== key) return;
 
           if (args.success) {
@@ -23,12 +17,12 @@ const persistConfig = {
           }
         });
 
-        window.api.store.send(readConfigRequest, key);
+        window.api.store.send('ReadConfig-Request', key);
       });
     },
     setItem: (key: string, item: any) => {
       return new Promise((resolve, reject) => {
-        window.api.store.onReceive(writeConfigResponse, (args: any) => {
+        window.api.store.onReceive('WriteConfig-Response', (args: any) => {
           if (args.key !== key) return;
 
           if (args.success) {
@@ -37,12 +31,12 @@ const persistConfig = {
             reject();
           }
         });
-        window.api.store.send(writeConfigRequest, key, item);
+        window.api.store.send('WriteConfig-Request', key, item);
       });
     },
     removeItem: (key: string) => {
       return new Promise((resolve, reject) => {
-        window.api.store.onReceive(writeConfigResponse, (args: any) => {
+        window.api.store.onReceive('WriteConfig-Response', (args: any) => {
           if (args.key !== key) return;
 
           if (args.success) {
@@ -51,7 +45,7 @@ const persistConfig = {
             reject();
           }
         });
-        window.api.store.set(writeConfigRequest, key, null);
+        window.api.store.send('WriteConfig-Request', key, null);
       });
     },
   },
