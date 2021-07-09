@@ -25,10 +25,6 @@ module.exports = {
 				baseUrl: ".",
 			}),
 			// prettier-ignore
-
-			new webpack.ProvidePlugin({
-				"React": "react",
-			}),
 		],
 	},
 };
