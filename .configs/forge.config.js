@@ -37,18 +37,22 @@ module.exports = {
       },
     },
     // You can only build the DMG target on macOS machines.
-    // {
-    //   name: "@electron-forge/maker-dmg",
-    //   config: {
-    //     // https://js.electronforge.io/maker/dmg/interfaces/makerdmgconfig
-    //     icon: path.join(packageAssetsPath, "icons", "mac", "icon.icns"),
-    //   },
-    // },
     {
-      name: "@electron-forge/maker-zip",
-      platforms: ["darwin"],
-      // No config choice
+      name: "@electron-forge/maker-dmg",
+      config: {
+        // https://js.electronforge.io/maker/dmg/interfaces/makerdmgconfig
+        icon: path.join(packageAssetsPath, "icons", "mac", "icon.icns"),
+        overwrite: true
+      },
     },
+
+    // Use maker-zip to build for mac, but without customizability
+    // {
+    //   name: "@electron-forge/maker-zip",
+    //   platforms: ["darwin"],
+    //   // No config choice
+    // },
+
     {
       name: "@electron-forge/maker-deb",
       config: {
