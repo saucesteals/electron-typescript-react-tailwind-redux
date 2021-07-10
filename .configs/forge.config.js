@@ -1,23 +1,41 @@
+const path = require("path");
+
+const appIconsPath = path.join(__dirname, "..", "assets", "appicons", "icons");
+
 module.exports = {
-  packagerConfig: {},
+  packagerConfig: {
+    icon: path.join(appIconsPath, "win", "icon.ico"),
+    asar: true,
+  },
   makers: [
     {
       name: "@electron-forge/maker-squirrel",
       config: {
-        name: "electron_typescript_react_webpack_tailwind_redux",
+        // https://js.electronforge.io/maker/squirrel/interfaces/makersquirrelconfig
+        setupExe: "Windows Setup.exe",
+        setupIcon: path.join(appIconsPath, "win", "icon.ico"),
       },
     },
     {
-      name: "@electron-forge/maker-zip",
-      platforms: ["darwin"],
+      name: "@electron-forge/maker-dmg",
+      config: {
+        // https://js.electronforge.io/maker/dmg/interfaces/makerdmgconfig
+        icon: path.join(appIconsPath, "mac", "icon.icns"),
+      },
     },
     {
       name: "@electron-forge/maker-deb",
-      config: {},
+      config: {
+        // https://js.electronforge.io/maker/deb/interfaces/makerdebconfig
+        icon: path.join(appIconsPath, "png", "1024x1024.png"),
+      },
     },
     {
       name: "@electron-forge/maker-rpm",
-      config: {},
+      config: {
+        // https://js.electronforge.io/maker/rpm/interfaces/makerrpmconfig
+        icon: path.join(appIconsPath, "png", "1024x1024.png"),
+      },
     },
   ],
   plugins: [

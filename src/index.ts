@@ -1,7 +1,7 @@
 import { app, BrowserWindow } from "electron";
 import isDev from "electron-is-dev";
 import Store from "electron-persist-secure/lib/store";
-
+import path from "path";
 // Import all IPCs to make sure they register their respective listeners
 import "./app/ipc/main";
 // import "./app/ipc/anything";
@@ -25,6 +25,15 @@ const createWindow = (): void => {
   const mainWindow = new BrowserWindow({
     height: 720,
     width: 1280,
+    icon: path.join(
+      __dirname,
+      "..",
+      "assets",
+      "appicons",
+      "icons",
+      "png",
+      "1024x1024.png"
+    ),
     webPreferences: {
       contextIsolation: true,
       nodeIntegration: false,

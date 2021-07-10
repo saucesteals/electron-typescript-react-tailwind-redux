@@ -1,5 +1,4 @@
 /* eslint @typescript-eslint/no-var-requires: "off" */
-const path = require("path");
 
 module.exports = {
   /**
@@ -15,6 +14,4 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
   },
-
-  externals: ["conf"],
 };
