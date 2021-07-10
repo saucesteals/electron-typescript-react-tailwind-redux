@@ -3241,10 +3241,10 @@ electron-packager@^15.0.0:
     semver "^7.1.3"
     yargs-parser "^20.0.0"
 
-electron-persist-secure@^1.1.6:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/electron-persist-secure/-/electron-persist-secure-1.1.6.tgz#88909cf611a20187d39af40fdaad2a6c77f18f00"
-  integrity sha512-MUHy+kpXXD92bj8O+vIkwkOGbWoUZsNqQ/dd1GT/xY6USm5yhwZLgFl6JL7CD7AYRgUuYJCgEV8QumDXd+GkUQ==
+electron-persist-secure@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/electron-persist-secure/-/electron-persist-secure-1.1.7.tgz#78917986868d8546ecd02c43de8c909ab1c78d48"
+  integrity sha512-w/cxgcR6H+1OakOr09cKgNf4o/GqvAmehudsyEugIxep9qXeikc4wkWtRmdyZBQwpxqg1TwpCKRNvqRqx3DOvQ==
   dependencies:
     conf "https://github.com/saucesteals/conf"
 

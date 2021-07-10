@@ -17,6 +17,10 @@ export const electronBridge = {
   openUrl: (url: string): void => {
     shell.openExternal(url);
   },
+
+  openPath: async (path: string): Promise<string> => {
+    return await shell.openPath(path);
+  },
 };
 
 contextBridge.exposeInMainWorld("electron", electronBridge);
