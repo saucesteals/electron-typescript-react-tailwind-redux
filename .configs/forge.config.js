@@ -13,6 +13,8 @@ module.exports = {
       config: {
         // https://js.electronforge.io/maker/squirrel/interfaces/makersquirrelconfig
         setupExe: "Windows Setup.exe",
+        iconUrl:
+          "https://raw.githubusercontent.com/saucesteals/electron-typescript-react-tailwind-redux/main/assets/appicons/icons/win/icon.ico",
         setupIcon: path.join(appIconsPath, "win", "icon.ico"),
       },
     },
