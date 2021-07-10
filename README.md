@@ -1,10 +1,7 @@
 # electron-typescript-react-webpack-tailwind-redux
 
->An Electron boilerplate featuring Typescript, React, Webpack, TailwindCSS and Redux ([Electron Persist Secure](https://github.com/saucesteals/electron-persist-secure) x [Redux Persist](https://github.com/rt2zz/redux-persist)) - ready to use for all frontend applications.
+> A secure, modular, and easy to use Electron boilerplate featuring Typescript, React, Webpack, TailwindCSS, Redux and [persistance](https://github.com/saucesteals/electron-persist-secure) (with redux-persist support) 
 
-Configuring an Electron desktop application can be tricky.
-
-This module creates a secure, modular, and easy to use configuration for best practice React and Electron technologies that you may want in your application!
 
 ---
 
@@ -51,15 +48,81 @@ yarn publish:win
 
 ---
 
-### **Customizing your application**
+### **Platform-Specifc Icon Generation**
 
-Customizing features from this boilerplate is extremely easy. You can remove features such as React Router and Redux simply by deleting files associated with them.
+1. Ensure that you have a high quality `source.png` icon in your `/assets/package` folder
+2. Run:
+```sh
+yarn create-icons
+```
+3. Check your new icons in `/assets/package/icons`
+
+---
+
+### **Folder Structure**
+
+```sh
+- /.configs
+  ... # development config files
+
+- /assets
+  - /package # static assets for packaging (ex. installer logo)
+    - /icons # icons for all platforms you wish to package for
+
+    - source.png  # the source image for all package icons
+                  # used to auto-generate all platform icons
+
+    ...      # extra assets (ex. installer loading gif)
+
+  - /icons  # icons for your backend/frontend
+
+  - /fonts  # fonts for your frontend
+
+  ...       # add on as u go (ex. /wallpapers)
+
+- /bridges
+  index.ts # main contextBridges
+
+  ... # add on bridges in other files or include them in index.ts
+      # make sure to import any new bridge files in the preload
+
+- /src
+  - /app # backend code
+    - /ipc # ipcRenderer -> ipcMain listeners
+      - main.ts # main functionality ipc listeners
+                # ex. quit/hide
+              
+      ...       # add on as u go
+                # make sure to add imports to new ipc files
+                # in the main electron entry
+
+  - /render # frontend code
+    - /containters # Containers per routes
+      - /HomePage # HomePage containters
+
+    - /components # Components
+
+    - /redux # Everything redux
+
+    - Routes.tsx # react-router routes
+
+    - renderer.ts # main electron renderer entry
+
+    - App.tsx # Export entire app with routes components 
+              # and redux provider if you are using it
+
+    - 
+
+  index.ts # main electron entry
+
+  preload.ts # electron preload
+
+```
 
 ---
 
 ### **Contributing**
-When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository.
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
+When contributing to this repository, please first discuss the change you wish to make via an issue.
 
 1. Fork the Project
 2. Create your Feature Branch (**git checkout -b feature/AmazingFeature**)
