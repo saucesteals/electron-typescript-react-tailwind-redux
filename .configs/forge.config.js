@@ -22,6 +22,8 @@ module.exports = {
     },
   ],
   makers: [
+    // https://www.electronforge.io/config/makers
+
     {
       name: "@electron-forge/maker-squirrel",
       config: {
@@ -45,6 +47,7 @@ module.exports = {
     {
       name: "@electron-forge/maker-zip",
       platforms: ["darwin"],
+      // No config choice
     },
     {
       name: "@electron-forge/maker-deb",
