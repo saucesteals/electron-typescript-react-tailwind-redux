@@ -19,7 +19,7 @@ if (require("electron-squirrel-startup")) {
 }
 
 
-const createStores = () => {
+const createStores = (): void => {
 
   new Store({
     projectName: "config"
