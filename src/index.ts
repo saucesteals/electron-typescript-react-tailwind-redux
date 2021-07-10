@@ -22,7 +22,7 @@ if (require("electron-squirrel-startup")) {
 const createStores = (): void => {
 
   new Store({
-    projectName: "config"
+    projectName: "config" // The stores name
   });
 
 }

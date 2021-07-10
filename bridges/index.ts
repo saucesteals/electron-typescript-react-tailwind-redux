@@ -32,7 +32,7 @@ export const electronBridge = {
 
 contextBridge.exposeInMainWorld("electron", electronBridge);
 
-export const storeBridge = createStoreBindings("config");
+export const storeBridge = createStoreBindings("config");  // "config" = the stores name
 
 contextBridge.exposeInMainWorld("store", {
   ...storeBridge,
