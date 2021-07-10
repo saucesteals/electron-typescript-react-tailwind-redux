@@ -4,7 +4,11 @@ import reducers from './reducers';
 
 const persistConfig = {
   key: 'root',
-  storage: window.store,
+  storage: {
+    setItem: window.store.set,
+    getItem: window.store.get,
+    removeItem: window.store.delete,
+  },
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);
