@@ -64,4 +64,19 @@ module.exports = [
       name: "[path][name].[ext]",
     },
   },
+
+  // Fonts
+  {
+    test: /\.(ttf|otf|eot|woff2|woff)$/,
+    use: [
+      {
+        loader: "file-loader",
+        options: {
+          name: "[path][name].[ext]",
+          publicPath: "../",
+          context: ".src",
+        },
+      },
+    ],
+  },
 ];
