@@ -1,12 +1,27 @@
 const path = require("path");
+require("dotenv").config();
 
-const appIconsPath = path.join(__dirname, "..", "assets", "appicons", "icons");
+const packageAssetsPath = path.join(__dirname, "..", "assets", "package");
 
 module.exports = {
   packagerConfig: {
-    icon: path.join(appIconsPath, "win", "icon.ico"),
+    icon: path.join(packageAssetsPath, "icons", "win", "icon.ico"),
     asar: true,
   },
+  publishers: [
+    {
+      name: "@electron-forge/publisher-github",
+      config: {
+        repository: {
+          owner: "saucesteals",
+          name: "electron-typescript-react-tailwind-redux",
+          authToken: process.env.GITHUB_TOKEN,
+        },
+        draft: true,
+        prerelease: true,
+      },
+    },
+  ],
   makers: [
     {
       name: "@electron-forge/maker-squirrel",
@@ -14,29 +29,31 @@ module.exports = {
         // https://js.electronforge.io/maker/squirrel/interfaces/makersquirrelconfig
         setupExe: "Windows Setup.exe",
         iconUrl:
-          "https://raw.githubusercontent.com/saucesteals/electron-typescript-react-tailwind-redux/main/assets/appicons/icons/win/icon.ico",
-        setupIcon: path.join(appIconsPath, "win", "icon.ico"),
+          "https://raw.githubusercontent.com/saucesteals/electron-typescript-react-tailwind-redux/main/assets/package/icons/win/icon.ico",
+        setupIcon: path.join(packageAssetsPath, "icons", "win", "icon.ico"),
+        authors: "saucesteals & fourwadu",
+        loadingGif: path.join(packageAssetsPath, "loading.gif"),
       },
     },
     {
       name: "@electron-forge/maker-dmg",
       config: {
         // https://js.electronforge.io/maker/dmg/interfaces/makerdmgconfig
-        icon: path.join(appIconsPath, "mac", "icon.icns"),
+        icon: path.join(packageAssetsPath, "icons", "mac", "icon.icns"),
       },
     },
     {
       name: "@electron-forge/maker-deb",
       config: {
         // https://js.electronforge.io/maker/deb/interfaces/makerdebconfig
-        icon: path.join(appIconsPath, "png", "1024x1024.png"),
+        icon: path.join(packageAssetsPath, "icons", "png", "1024x1024.png"),
       },
     },
     {
       name: "@electron-forge/maker-rpm",
       config: {
         // https://js.electronforge.io/maker/rpm/interfaces/makerrpmconfig
-        icon: path.join(appIconsPath, "png", "1024x1024.png"),
+        icon: path.join(packageAssetsPath, "icons", "png", "1024x1024.png"),
       },
     },
   ],

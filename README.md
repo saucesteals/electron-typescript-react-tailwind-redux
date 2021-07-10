@@ -1,12 +1,14 @@
 # electron-typescript-react-webpack-tailwind-redux
 
->An Electron boilerplate featuring Typescript, React, Webpack, TailwindCSS and Redux (featuring [Electron Store](https://github.com/sindresorhus/electron-store) & [Redux Persist](https://github.com/saucesteals/electron-persist-secure)) - ready to use for all frontend applications.
+>An Electron boilerplate featuring Typescript, React, Webpack, TailwindCSS and Redux ([Electron Persist Secure](https://github.com/saucesteals/electron-persist-secure) x [Redux Persist](https://github.com/rt2zz/redux-persist)) - ready to use for all frontend applications.
 
 Configuring an Electron desktop application can be tricky.
 
 This module creates a secure, modular, and easy to use configuration for best practice React and Electron technologies that you may want in your application!
 
-### Install
+---
+
+### **Installation**
 
 
 ```sh
@@ -17,23 +19,46 @@ $ cd your-project-name
 $ yarn
 ```
 
-### Starting Development
+---
+
+### **Starting Development**
 
 Start the app in the `dev` environment:
 ```sh
 yarn start
 ```
 
-### Packaging for Production
+---
+
+### **Packaging for Production**
 To package apps into a local executable:
 ```sh
 yarn make:win
+# yarn make:mac
+# yarn make:linux
 ```
 
-### Customizing your application
+---
+
+### **Releasing with GitHub**
+1. Open your `env.example` file (or `.env` if you have already made one)
+2. Set your `GH_TOKEN` 
+3. Rename the file to `.env` if not already done so
+```sh
+yarn publish:win
+# yarn publish:mac
+# yarn publish:linux
+```
+
+---
+
+### **Customizing your application**
+
 Customizing features from this boilerplate is extremely easy. You can remove features such as React Router and Redux simply by deleting files associated with them.
 
-### Contributing
+---
+
+### **Contributing**
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository.
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
 
@@ -44,6 +69,8 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request and leave some comments!
 
 
-### Maintainers
+---
+
+### **Maintainers**
 * [Noah (wadu)](https://github.com/fourwadu/)
 * [Daniel (sauce)](https://github.com/saucesteals/)

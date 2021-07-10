@@ -29,7 +29,7 @@ const createWindow = (): void => {
       __dirname,
       "..",
       "assets",
-      "appicons",
+      "package",
       "icons",
       "png",
       "1024x1024.png"
