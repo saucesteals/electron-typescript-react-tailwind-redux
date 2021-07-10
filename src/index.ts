@@ -20,11 +20,11 @@ if (require("electron-squirrel-startup")) {
 
 
 const createStores = () => {
-  const userDataPath = app.getPath("userData");
 
   new Store({
-    cwd: userDataPath,
+    projectName: "config"
   });
+
 }
 
 const createWindow = (): void => {
