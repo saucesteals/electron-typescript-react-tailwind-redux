@@ -18,7 +18,6 @@ module.exports = {
           authToken: process.env.GITHUB_TOKEN,
         },
         draft: true,
-        prerelease: true,
       },
     },
   ],
@@ -35,24 +34,22 @@ module.exports = {
         loadingGif: path.join(packageAssetsPath, "loading.gif"),
       },
     },
+    // You can only build the DMG target on macOS machines.
+    // {
+    //   name: "@electron-forge/maker-dmg",
+    //   config: {
+    //     // https://js.electronforge.io/maker/dmg/interfaces/makerdmgconfig
+    //     icon: path.join(packageAssetsPath, "icons", "mac", "icon.icns"),
+    //   },
+    // },
     {
-      name: "@electron-forge/maker-dmg",
-      config: {
-        // https://js.electronforge.io/maker/dmg/interfaces/makerdmgconfig
-        icon: path.join(packageAssetsPath, "icons", "mac", "icon.icns"),
-      },
+      name: "@electron-forge/maker-zip",
+      platforms: ["darwin"],
     },
     {
       name: "@electron-forge/maker-deb",
       config: {
         // https://js.electronforge.io/maker/deb/interfaces/makerdebconfig
-        icon: path.join(packageAssetsPath, "icons", "png", "1024x1024.png"),
-      },
-    },
-    {
-      name: "@electron-forge/maker-rpm",
-      config: {
-        // https://js.electronforge.io/maker/rpm/interfaces/makerrpmconfig
         icon: path.join(packageAssetsPath, "icons", "png", "1024x1024.png"),
       },
     },
