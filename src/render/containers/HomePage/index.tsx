@@ -1,8 +1,7 @@
 import { store } from "@store";
-import ReactLogo from "@assets/icons/react.png";
+import ReactLogo from "@assets/icons/react.svg";
 import { useSelector } from "react-redux";
-import { useState } from "react";
-import { devNull } from "node:os";
+import React, { useState } from "react";
 
 const HomePage = () => {
   const [show, setShow] = useState(true);
@@ -18,6 +17,13 @@ const HomePage = () => {
       style={{ fontFamily: "Open Sans" }}
       className="flex flex-col w-screen h-screen bg-black items-center justify-center p-12 text-white"
     >
+      <img
+        onClick={() => openUrl("https://reactjs.org/")}
+        src={ReactLogo}
+        className="mb-12 cursor-pointer"
+        height={69}
+        width={69}
+      />
       <div className="font-bold mb-4">
         React + Tailwind + Electron + Redux = ♥
       </div>
@@ -42,7 +48,7 @@ const HomePage = () => {
           {JSON.stringify(currentState)}
         </pre>
       ) : null}
-      <div className="cursor-pointer mb-4" onClick={() => setShow(!show)}>
+      <div className="cursor-pointer p-4" onClick={() => setShow(!show)}>
         Click here to {show ? "hide" : "show"} your <strong>Redux</strong> store
       </div>
       <div className="flex flex-row text-pink-300">
