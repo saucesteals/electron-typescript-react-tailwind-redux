@@ -1,7 +1,6 @@
 import { app, BrowserWindow } from 'electron';
 import isDev from 'electron-is-dev';
-
-import Store from 'electron-persist-secure/dist/Store';
+import Store from 'electron-persist-secure/lib/store';
 
 // Import all IPCs to make sure they register their respective listeners
 import './app/ipc/main';

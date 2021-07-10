@@ -20,5 +20,5 @@
       "@store": ["./src/render/redux/index.ts"]
     }
   },
-  "include": ["src/**/*", "assets/**/*", "bridges/**/*", "global.d.ts"]
+  "include": ["src/**/*", "assets/**/*", "bridges/**/*"]
 }

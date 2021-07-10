@@ -5,9 +5,9 @@ function count(state: any, action: any) {
     state = 0; // If state is undefined, initialize it with a default value
   }
 
-  if (action.type === 'INCREMENT') {
+  if (action.type === 'counter/INCREMENT') {
     return state + 1;
-  } else if (action.type === 'DECREMENT') {
+  } else if (action.type === 'counter/DECREMENT') {
     return state - 1;
   } else {
     return state; // In case an action is passed in we don't understand

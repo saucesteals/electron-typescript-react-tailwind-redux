@@ -1,5 +1,5 @@
 const { ipcRenderer, contextBridge } = require('electron');
-import { createStoreBindings } from 'electron-persist-secure';
+import { createStoreBindings } from 'electron-persist-secure/lib/bindings';
 
 export const electronBridge = {
   quit: () => {
@@ -18,10 +18,6 @@ contextBridge.exposeInMainWorld('electron', electronBridge);
 
 export const storeBridge = createStoreBindings();
 
-console.log('Created bindings');
-
-// Expose protected methods that allow the renderer process to use
-// the ipcRenderer without exposing the entire object
 contextBridge.exposeInMainWorld('store', {
   ...storeBridge,
 });

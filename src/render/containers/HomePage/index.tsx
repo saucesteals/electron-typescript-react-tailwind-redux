@@ -20,9 +20,12 @@ const HomePage = () => {
       <button onClick={() => setShow(!show)}>
         {show ? 'Hide' : 'Show'} your store!
       </button>
-      <pre>{JSON.stringify(currentState)}</pre>
-      <button onClick={() => store.dispatch({ type: 'INCREMENT' })}>
-        Change the state of changeMe
+      {show ? <pre>{JSON.stringify(currentState)}</pre> : null}
+      <button onClick={() => store.dispatch({ type: 'counter/INCREMENT' })}>
+        Increment
+      </button>
+      <button onClick={() => store.dispatch({ type: 'counter/DECREMENT' })}>
+        Decrement
       </button>
     </div>
   );
