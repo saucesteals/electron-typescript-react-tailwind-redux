@@ -41,9 +41,8 @@ yarn make:win
 ---
 
 ### **Releasing with GitHub**
-1. Open your `env.example` file (or `.env` if you have already made one)
+1. Copy the contents of `env.example` to `.env` (Copy into a blank one if you dont already have one)
 2. Set your `GH_TOKEN` 
-3. Rename the file to `.env` if not already done so
 ```sh
 yarn publish:win
 # yarn publish:mac
