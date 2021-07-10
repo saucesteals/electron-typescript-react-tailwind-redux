@@ -2,38 +2,38 @@ module.exports = {
   packagerConfig: {},
   makers: [
     {
-      name: "@electron-forge/maker-squirrel",
+      name: '@electron-forge/maker-squirrel',
       config: {
-        name: "electron_typescript_react_webpack_tailwind_redux",
+        name: 'electron_typescript_react_webpack_tailwind_redux',
       },
     },
     {
-      name: "@electron-forge/maker-zip",
-      platforms: ["darwin"],
+      name: '@electron-forge/maker-zip',
+      platforms: ['darwin'],
     },
     {
-      name: "@electron-forge/maker-deb",
+      name: '@electron-forge/maker-deb',
       config: {},
     },
     {
-      name: "@electron-forge/maker-rpm",
+      name: '@electron-forge/maker-rpm',
       config: {},
     },
   ],
   plugins: [
     [
-      "@electron-forge/plugin-webpack",
+      '@electron-forge/plugin-webpack',
       {
-        mainConfig: "./webpack.main.config.js",
+        mainConfig: './webpack.main.config.js',
         renderer: {
-          config: "./webpack.renderer.config.js",
+          config: './webpack.renderer.config.js',
           entryPoints: [
             {
-              html: "./src/render/index.html",
-              js: "./src/render/renderer.ts",
-              name: "main_window",
+              html: './src/render/index.html',
+              js: './src/render/renderer.ts',
+              name: 'main_window',
               preload: {
-                js: "./bridges/index.ts",
+                js: './src/preload.ts',
               },
             },
           ],
