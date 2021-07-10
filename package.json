@@ -9,7 +9,7 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "eslint --ext .ts .",
+    "lint": "cross-env NODE_ENV=development eslint . --cache --ext .js,.jsx,.ts,.tsx",
     "prepare": "husky install",
     "commit": "cz"
   },
@@ -20,11 +20,39 @@
   },
   "license": "MIT",
   "config": {
-    "forge": "./forge.config.js",
+    "forge": "./.configs/forge.config.js",
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog",
       "defaultScope": "global"
     }
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": [
+          ".prettierrc",
+          ".eslintrc"
+        ],
+        "options": {
+          "parser": "json"
+        }
+      }
+    ],
+    "singleQuote": false
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "cross-env NODE_ENV=development eslint --cache"
+    ],
+    "{*.json,.{eslintrc,prettierrc}}": [
+      "prettier --ignore-path .eslintignore --parser json --write"
+    ],
+    "*.{css,scss}": [
+      "prettier --ignore-path .eslintignore --write"
+    ],
+    "*.{html,md,yml}": [
+      "prettier --ignore-path .eslintignore  --write"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -43,9 +71,11 @@
     "@types/react-dom": "^17.0.9",
     "@types/react-router-dom": "^5.1.8",
     "@typescript-eslint/parser": "^4.0.1",
+    "@zauberware/eslint-config": "^0.1.9",
     "autoprefixer": "^10.2.6",
     "babel-loader": "^8.2.2",
     "commitizen": "^4.2.4",
+    "cross-env": "^7.0.3",
     "css-loader": "^5.0.0",
     "electron": "13.1.6",
     "eslint": "^7.6.0",
