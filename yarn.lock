@@ -1575,12 +1575,6 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
-"ajv-formats@github:saucesteals/ajv-formats":
-  version "2.1.0"
-  resolved "https://codeload.github.com/saucesteals/ajv-formats/tar.gz/c98a1138e47f7d087641f2bed7a0a54944d000ce"
-  dependencies:
-    ajv "^8.0.0"
-
 ajv-keywords@^3.4.1, ajv-keywords@^3.5.2:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-3.5.2.tgz#31f29da5ab6e00d1c2d329acf7b5929614d5014d"
@@ -1596,7 +1590,7 @@ ajv@^6.10.0, ajv@^6.12.2, ajv@^6.12.3, ajv@^6.12.4, ajv@^6.12.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-ajv@^8.0.0, ajv@^8.0.1, ajv@^8.1.0:
+ajv@^8.0.1, ajv@^8.1.0:
   version "8.6.1"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.6.1.tgz#ae65764bf1edde8cd861281cda5057852364a295"
   integrity sha512-42VLtQUOLefAvKFAQIxIZDaThq6om/PrfP0CYk3/vn+y4BMNkKnbli8ON2QCiHov4KkzOSJ/xSoBJdayiiYvVQ==
@@ -2537,10 +2531,9 @@ concat-stream@^1.6.2:
 
 "conf@https://github.com/saucesteals/conf":
   version "10.0.1"
-  resolved "https://github.com/saucesteals/conf#a24f0c63cc395d86abc03631a9ea39e6b90524f2"
+  resolved "https://github.com/saucesteals/conf#02a85f47aef68250757725d106fa6e4cdf3749f8"
   dependencies:
     ajv "^8.1.0"
-    ajv-formats "github:saucesteals/ajv-formats"
     atomically "^1.7.0"
     debounce-fn "^4.0.0"
     dot-prop "^6.0.1"
@@ -8994,9 +8987,9 @@ ws@^5.2.0:
     async-limiter "~1.0.0"
 
 ws@^7.4.5:
-  version "7.5.2"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.2.tgz#09cc8fea3bec1bc5ed44ef51b42f945be36900f6"
-  integrity sha512-lkF7AWRicoB9mAgjeKbGqVUekLnSNO4VjKVnuPHpQeOxZOErX6BPXwJk70nFslRCEEA8EVW7ZjKwXaP9N+1sKQ==
+  version "7.5.3"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.3.tgz#160835b63c7d97bfab418fc1b8a9fced2ac01a74"
+  integrity sha512-kQ/dHIzuLrS6Je9+uv81ueZomEwH0qVYstcAQ4/Z93K8zeko9gtAbttJWzoC5ukqXY1PpoouV3+VSOqEAFt5wg==
 
 xhr@^2.0.1:
   version "2.6.0"
