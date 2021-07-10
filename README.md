@@ -24,7 +24,7 @@ Start the app in the `dev` environment:
 
 ### Packaging for Production
 To package apps into a local executable:
-`yarn package`
+`yarn make:win`
 
 ### Customizing your application
 Customizing features from this boilerplate is extremely easy. You can remove features such as React Router and Redux simply by deleting files associated with them.
