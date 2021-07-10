@@ -1,11 +1,11 @@
 const path = require("path");
+const package = require("../package.json")
 require("dotenv").config();
 
 const packageAssetsPath = path.join(__dirname, "..", "assets", "package");
 
 module.exports = {
   packagerConfig: {
-    icon: path.join(packageAssetsPath, "icons", "win", "icon.ico"),
     asar: true,
   },
   publishers: [
@@ -42,7 +42,9 @@ module.exports = {
       config: {
         // https://js.electronforge.io/maker/dmg/interfaces/makerdmgconfig
         icon: path.join(packageAssetsPath, "icons", "mac", "icon.icns"),
-        overwrite: true
+        background: path.join(packageAssetsPath, "source.png"),
+        overwrite: true,
+        name: "electron-boilerplate", // NEEDS TO BE SHORTER THAN 27 CHARACTERS
       },
     },
 
