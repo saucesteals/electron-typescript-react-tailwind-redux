@@ -9,8 +9,9 @@ This module creates a secure, modular, and easy to use configuration for best pr
 ### Install
 
 
-```
-$ git clone https://github.com/saucesteals/electron-typescript-react-webpack-tailwind-redux.git your-project-name
+```sh
+$ git clone --depth 1 --single-branch https://github.com/saucesteals/electron-typescript-react-tailwind-redux.git your-project-name
+$ cd your-project-name
 $ yarn
 ```
 
