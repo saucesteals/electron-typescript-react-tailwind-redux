@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { ipcRenderer, contextBridge } = require("electron");
+const { ipcRenderer, contextBridge, shell } = require("electron");
 import { createStoreBindings } from "electron-persist-secure/lib/bindings";
 
 export const electronBridge = {
@@ -12,6 +12,10 @@ export const electronBridge = {
 
   relaunch: (): void => {
     ipcRenderer.send("relaunch-app");
+  },
+
+  openUrl: (url: string): void => {
+    shell.openExternal(url);
   },
 };
 

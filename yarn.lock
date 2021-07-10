@@ -766,11 +766,6 @@
   dependencies:
     sourcemap-codec "^1.4.4"
 
-"@msgpack/msgpack@^2.6.0":
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/@msgpack/msgpack/-/msgpack-2.7.0.tgz#3a0fbe4e0406f6576895f990857e19da97376f18"
-  integrity sha512-mlRYq9FSsOd4m+3wZWatemn3hGFZPWNJ4JQOdrir4rrMK2PyIk26idKBoUWrqF3HJJHl+5GpRU+M0wEruJwecg==
-
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -2833,10 +2828,10 @@ electron-packager@^15.0.0:
     semver "^7.1.3"
     yargs-parser "^20.0.0"
 
-electron-persist-secure@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/electron-persist-secure/-/electron-persist-secure-1.1.0.tgz#39510589bb23967c35cc0d7230bac583be0137f4"
-  integrity sha512-UM4tVtgUWhglw3oz803tSbGgext/CwzbCXnSNHJO0UPmeIna6C+x0XcjSOBE+jBLW3XfLCnNQ2/WAKcJQhx98w==
+electron-persist-secure@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/electron-persist-secure/-/electron-persist-secure-1.1.4.tgz#07cc719c05d5785c27daa9d2142a8502904ebb95"
+  integrity sha512-B0V8cwdyATVGURyU2vVbFQxljpQBAuiTE4K5XTQA7juPYrjfdwRd8jcUBmfiS9fUmrS5Xc3XCjKEqPfj8B23bQ==
   dependencies:
     conf "^10.0.1"
 
@@ -6932,14 +6927,6 @@ schema-utils@^3.0.0:
     "@types/json-schema" "^7.0.7"
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
-
-secure-electron-store@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/secure-electron-store/-/secure-electron-store-3.0.1.tgz#a71efe3c5d0f37eb2e9362678e266e3e5023a68e"
-  integrity sha512-44NPaeuWR3hdgr/b/GnMQqgUVRlNfIOeBUogfeJA9tjERhkKcCgL5oRSRs5jp0nPQyV26C4N/dgrBwhWlHtRlg==
-  dependencies:
-    "@msgpack/msgpack" "^2.6.0"
-    process "^0.11.10"
 
 select-hose@^2.0.0:
   version "2.0.0"

@@ -8,17 +8,13 @@ const HomePage = () => {
 
   const currentState = useSelector((state) => state);
 
-  const openUrl = (url: string) => {
-    window.open(url, "_blank");
-  };
-
   return (
     <div
       style={{ fontFamily: "Open Sans" }}
       className="flex flex-col w-screen h-screen bg-black items-center justify-center p-12 text-white"
     >
       <img
-        onClick={() => openUrl("https://reactjs.org/")}
+        onClick={() => window.electron.openUrl("https://reactjs.org/")}
         src={ReactLogo}
         className="mb-12 cursor-pointer"
         height={69}
@@ -31,14 +27,18 @@ const HomePage = () => {
         By&nbsp;
         <div
           className="cursor-pointer hover:text-blue-400 hover:underline"
-          onClick={() => openUrl("https://github.com/saucesteals/")}
+          onClick={() =>
+            window.electron.openUrl("https://github.com/saucesteals/")
+          }
         >
           <strong>Daniel</strong>
         </div>
         &nbsp;&&nbsp;
         <div
           className="cursor-pointer hover:text-blue-400 hover:underline"
-          onClick={() => openUrl("https://github.com/fourwadu/")}
+          onClick={() =>
+            window.electron.openUrl("https://github.com/fourwadu/")
+          }
         >
           <strong>Noah</strong>
         </div>
