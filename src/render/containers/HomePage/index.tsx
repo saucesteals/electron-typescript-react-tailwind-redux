@@ -66,7 +66,7 @@ const HomePage = () => {
       <div className="flex flex-row text-pink-300 p-2">
         <button
           onClick={async () => {
-            window.electron.openPath(await window.store.path());
+            window.electron.openPath(await window.store.getPath());
           }}
         >
           Open Store
