@@ -1,13 +1,13 @@
-# electron-typescript-react-webpack-tailwind-redux
+# electron-typescript-react-tailwind-redux
 
-> A secure, modular, and easy to use Electron boilerplate featuring Typescript, React, Webpack, TailwindCSS, Redux and [persistance](https://github.com/saucesteals/electron-persist-secure) (with redux-persist support) 
+> A secure, modular, and easy to use [Electron Forge](https://www.electronforge.io/) boilerplate featuring [Typescript](https://www.typescriptlang.org/), [React](https://reactjs.org/), [Webpack](https://webpack.js.org/), [TailwindCSS](https://tailwindcss.com/), [Redux](https://redux.js.org/) and [persistance](https://github.com/saucesteals/electron-persist-secure) (with [redux-persist](https://github.com/rt2zz/redux-persist) support) 
 
 
 ---
 
 ### **Installation**
 
-
+Clone the repository locally with **none** of its git history
 ```sh
 $ git clone --depth 1 --single-branch https://github.com/saucesteals/electron-typescript-react-tailwind-redux.git your-project-name
 
@@ -15,6 +15,18 @@ $ cd your-project-name
 
 $ yarn
 ```
+### **OR**
+
+Generate a GitHub repository with the [Use this template](https://github.com/saucesteals/electron-typescript-react-tailwind-redux/generate) button above
+
+```sh
+$ git clone https://github.com/your-username/your-project-name
+
+$ cd your-project-name
+
+$ yarn
+```
+
 
 ---
 
