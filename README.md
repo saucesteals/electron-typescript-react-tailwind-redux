@@ -41,7 +41,7 @@ yarn start
 
 ### **Packaging for Production**
 To package apps into a local executable:
-- Personalize the forge **maker** configs at `/.configs/forge.`
+- Personalize the forge **maker** configs at `/.config/forge.`
 ```sh
 yarn make:win
 # yarn make:mac
@@ -53,7 +53,7 @@ yarn make:win
 ### **Releasing with GitHub**
 1. Copy the contents of `env.example` to `.env` (Copy into a blank one if you dont already have one)
 2. Set your `GH_TOKEN` 
-3. Personalize the forge **publisher** configs at `/.configs/forge.config.js`
+3. Personalize the forge **publisher** configs at `/.config/forge.config.js`
 ```sh
 yarn publish:win
 # yarn publish:mac
@@ -76,7 +76,7 @@ yarn create-icons
 ### **Folder Structure**
 
 ```sh
-- /.configs
+- /.config
   ... # development config files
 
 - /assets

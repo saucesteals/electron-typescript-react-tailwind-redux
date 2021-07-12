@@ -1,5 +1,5 @@
 const path = require("path");
-const package = require("../package.json")
+const package = require("../package.json");
 require("dotenv").config();
 
 const packageAssetsPath = path.join(__dirname, "..", "assets", "package");
@@ -67,9 +67,9 @@ module.exports = {
     [
       "@electron-forge/plugin-webpack",
       {
-        mainConfig: "./.configs/webpack.main.config.js",
+        mainConfig: "./.config/webpack.main.config.js",
         renderer: {
-          config: "./.configs/webpack.renderer.config.js",
+          config: "./.config/webpack.renderer.config.js",
           entryPoints: [
             {
               html: "./src/render/index.html",
