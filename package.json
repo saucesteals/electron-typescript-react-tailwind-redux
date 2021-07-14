@@ -29,7 +29,7 @@
   "config": {
     "forge": "./.config/forge.config.js",
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog",
+      "path": "cz-conventional-changelog",
       "defaultScope": "global"
     }
   },
@@ -64,8 +64,6 @@
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-react": "^7.14.5",
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
     "@electron-forge/cli": "^6.0.0-beta.57",
     "@electron-forge/maker-deb": "^6.0.0-beta.57",
     "@electron-forge/maker-dmg": "^6.0.0-beta.57",
