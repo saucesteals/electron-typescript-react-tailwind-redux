@@ -28,7 +28,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(
   persistConfig,
   combineReducers({
-    count: countReducer,
+    counter: countReducer,
     char: charReducer,
   })
 );

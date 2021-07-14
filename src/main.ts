@@ -1,3 +1,12 @@
+/**
+ * This file will automatically be loaded by electron and run in the "main" context.
+ * This is your "backend"
+ * To learn more about the differences between the "main" and the "renderer" context in
+ * Electron, visit:
+ *
+ * https://electronjs.org/docs/tutorial/application-architecture#main-and-renderer-processes
+ */
+
 import { app, BrowserWindow } from "electron";
 import isDev from "electron-is-dev";
 import Store from "electron-persist-secure/lib/store";

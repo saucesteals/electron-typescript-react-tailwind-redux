@@ -120,16 +120,16 @@ yarn create-icons
 
     - Routes.tsx # react-router routes
 
-    - renderer.ts # main electron renderer entry
-
     - App.tsx # Export entire app with routes components 
               # and redux provider if you are using it
 
     - 
 
-  index.ts # main electron entry
+  main.ts # main "backend" electron entry
 
-  preload.ts # electron preload
+  renderer.ts # main "frontend" electron renderer entry
+
+  preload.ts # main "entry to frontend" electron preload entry
 
 ```
 

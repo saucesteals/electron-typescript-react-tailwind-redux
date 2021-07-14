@@ -22,4 +22,4 @@ ipcMain.on("relaunch-app", () => {
 });
 
 // In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and import them in index.ts.
+// code. You can also put them in separate files and import them in main.ts.
