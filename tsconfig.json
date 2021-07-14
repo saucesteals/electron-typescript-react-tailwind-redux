@@ -20,5 +20,5 @@
       "@redux/*": ["./src/render/redux/*"]
     }
   },
-  "include": ["src/**/*", "assets/**/*", "bridges/**/*"]
+  "include": ["src/**/*", "assets/**/*"]
 }

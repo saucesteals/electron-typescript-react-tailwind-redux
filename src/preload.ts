@@ -7,4 +7,4 @@
  * https://www.electronjs.org/docs/tutorial/process-model#preload-scripts
  */
 
-import "../bridges/index";
+import "./bridges/main";

@@ -94,13 +94,13 @@ yarn create-icons
 
   ...       # add on as u go (ex. /wallpapers)
 
-- /bridges
-  index.ts # main contextBridges
-
-  ... # add on bridges in other files or include them in index.ts
-      # make sure to import any new bridge files in the preload
-
 - /src
+  - /bridges
+    index.ts # main contextBridges
+
+    ... # add on bridges in other files or include them in index.ts
+        # make sure to import any new bridge files in the preload
+        
   - /app # backend code
     - /ipc # ipcRenderer -> ipcMain listeners
       - main.ts # main functionality ipc listeners
