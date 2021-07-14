@@ -18,7 +18,8 @@
   "plugins": ["@typescript-eslint", "import"],
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/no-floating-promises": "off"
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-inferrable-types": "off"
   },
   "extends": [
     "plugin:@typescript-eslint/recommended",

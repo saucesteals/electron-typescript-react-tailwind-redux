@@ -1,12 +1,24 @@
-import { store } from "@store";
+import { store } from "@redux/index";
 import ReactLogo from "@assets/icons/react.svg";
 import { useSelector } from "react-redux";
-import React, { useState } from "react";
+import { useState } from "react";
+import { incrementCounter, decrementCounter } from "@redux/reducers/count";
+import { incrementChar, decrementChar } from "@redux/reducers/characters";
 
 const HomePage = () => {
   const [show, setShow] = useState(true);
 
   const currentState = useSelector((state) => state);
+
+  const increment = () => {
+    store.dispatch(incrementChar());
+    store.dispatch(incrementCounter(1));
+  };
+
+  const decrement = () => {
+    store.dispatch(decrementChar(1));
+    store.dispatch(decrementCounter());
+  };
 
   return (
     <div
@@ -24,6 +36,7 @@ const HomePage = () => {
       <div className="font-bold mb-4">
         React + Tailwind + Electron + Redux = ♥
       </div>
+
       <div className="flex flex-row text-pink-300">
         By&nbsp;
         <div
@@ -44,24 +57,22 @@ const HomePage = () => {
           <strong>Noah</strong>
         </div>
       </div>
+
       {show ? (
-        <pre className="bg-blue-500 w-1/2 p-4 text-center rounded-md m-12">
+        <pre className="bg-blue-500 p-4 text-center rounded-md m-5">
           {JSON.stringify(currentState)}
         </pre>
       ) : null}
+
       <div className="cursor-pointer p-4" onClick={() => setShow(!show)}>
         Click here to {show ? "hide" : "show"} your <strong>Redux</strong> store
       </div>
+
       <div className="flex flex-row text-pink-300">
-        <button
-          className="mr-4"
-          onClick={() => store.dispatch({ type: "counter/INCREMENT" })}
-        >
-          Increase
+        <button className="mr-4" onClick={increment}>
+          Increment
         </button>
-        <button onClick={() => store.dispatch({ type: "counter/DECREMENT" })}>
-          Decrease
-        </button>
+        <button onClick={decrement}>Decrement</button>
       </div>
 
       <div className="text-pink-300 p-2">

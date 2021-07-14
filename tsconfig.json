@@ -17,7 +17,7 @@
       "@assets/*": ["./assets/*"],
       "@containers/*": ["./src/render/containers/*"],
       "@components/*": ["./src/render/components/*"],
-      "@store": ["./src/render/redux/index.ts"]
+      "@redux/*": ["./src/render/redux/*"]
     }
   },
   "include": ["src/**/*", "assets/**/*", "bridges/**/*"]
