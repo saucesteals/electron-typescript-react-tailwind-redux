@@ -10,8 +10,13 @@ export const electronBridge = {
   quit: (): void => {
     ipcRenderer.send("quit-app");
   },
-  hide: (): void => {
-    ipcRenderer.send("hide-app");
+
+  minimize: (): void => {
+    ipcRenderer.send("minimize-app");
+  },
+
+  maximize: (): void => {
+    ipcRenderer.send("maximize-app");
   },
 
   relaunch: (): void => {
@@ -32,7 +37,7 @@ export const electronBridge = {
 
 contextBridge.exposeInMainWorld("electron", electronBridge);
 
-export const storeBridge = createStoreBindings("config");  // "config" = the stores name
+export const storeBridge = createStoreBindings("config"); // "config" = the stores name
 
 contextBridge.exposeInMainWorld("store", {
   ...storeBridge,

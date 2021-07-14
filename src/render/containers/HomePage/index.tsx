@@ -20,6 +20,7 @@ const HomePage = () => {
         height={69}
         width={69}
       />
+
       <div className="font-bold mb-4">
         React + Tailwind + Electron + Redux = ♥
       </div>
@@ -63,13 +64,31 @@ const HomePage = () => {
         </button>
       </div>
 
-      <div className="flex flex-row text-pink-300 p-2">
+      <div className="text-pink-300 p-2">
         <button
           onClick={async () => {
             window.electron.openPath(await window.store.getPath());
           }}
         >
           Open Store
+        </button>
+      </div>
+
+      <div className="flex justify-center w-72">
+        <button
+          className="mac-red mr-auto w-24 text-right"
+          onClick={window.electron.quit}
+        >
+          Exit / Quit
+        </button>
+        <button className="mac-orange w-24" onClick={window.electron.minimize}>
+          Minimize
+        </button>
+        <button
+          className="mac-green ml-auto w-24 text-left"
+          onClick={window.electron.maximize}
+        >
+          Maximize
         </button>
       </div>
     </div>
