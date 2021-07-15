@@ -17,14 +17,14 @@ const persistConfig = {
   key: "root",
   version: 1,
   storage: {
-    // Stoage config for electron-persist-secure
+    // Storage config for electron-persist-secure
     setItem: window.store.set,
     getItem: window.store.get,
     removeItem: window.store.delete,
   },
 };
 
-// Make our reducers persistant
+// Make our reducers persistent
 const persistedReducer = persistReducer(
   persistConfig,
   combineReducers({
@@ -46,5 +46,5 @@ export const store = configureStore({
     }),
 });
 
-// Make the store persistant
+// Make the store persistent
 export const persistor = persistStore(store);
