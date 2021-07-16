@@ -18,7 +18,9 @@ const persistConfig = {
   version: 1,
   storage: {
     // Storage config for electron-persist-secure
-    setItem: window.store.set,
+    setItem: (key: string, value: string) => {
+      window.store.set(key, JSON.parse(value));
+    },
     getItem: window.store.get,
     removeItem: window.store.delete,
   },
