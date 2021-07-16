@@ -22,7 +22,12 @@ const persistConfig = {
     getItem: window.store.get,
     removeItem: window.store.delete,
   },
+
+  // Skip JSON.stringify(data) before storing it
+  // You can remove this if you do not want your store in the persisted file to be formatted
   serialize: false,
+
+  // window.store.get already returns deserialized data
   deserialize: false,
 };
 
