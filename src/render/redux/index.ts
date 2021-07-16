@@ -22,6 +22,8 @@ const persistConfig = {
     getItem: window.store.get,
     removeItem: window.store.delete,
   },
+  serialize: false,
+  deserialize: false,
 };
 
 // Make our reducers persistent
