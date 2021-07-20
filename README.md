@@ -41,7 +41,7 @@ yarn start
 
 ### **Packaging for Production**
 To package apps into a local executable:
-- Personalize the forge **maker** configs at `/.config/forge.`
+- Personalize the forge **maker** configs at `/.config/forge.config.js`
 ```sh
 yarn make:win
 # yarn make:mac
