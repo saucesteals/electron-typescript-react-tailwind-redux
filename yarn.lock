@@ -963,13 +963,6 @@
   dependencies:
     cross-spawn "^7.0.1"
 
-"@marshallofsound/webpack-asset-relocator-loader@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@marshallofsound/webpack-asset-relocator-loader/-/webpack-asset-relocator-loader-0.5.0.tgz#e764e9c1edf7dfc0db7aa5d67767f4f6f0a681c5"
-  integrity sha512-X50R97SiDNTpOckiplghBo63Vo8GxSsr98s3VTwEu3qyVr+TY4I91KRtKelEj2OAfgMnkTymw89+psFVq8aB1g==
-  dependencies:
-    sourcemap-codec "^1.4.4"
-
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -1125,6 +1118,13 @@
   integrity sha512-PyRA9sm1Yayuj5OIoJ1hGt2YISX45w9WcFbh6ddT0Z/0yaFxOtGLInr4jUfU1EAFVs0Yfyfev4RNwBlUaHdlDQ==
   dependencies:
     defer-to-connect "^2.0.0"
+
+"@timfish/webpack-asset-relocator-loader@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@timfish/webpack-asset-relocator-loader/-/webpack-asset-relocator-loader-0.1.0.tgz#26d49e2ffdc0127489871fcb32d69ccf1be9da23"
+  integrity sha512-Z0tYkI3NSngJOGULCL8Fv+npy7k0JSQ7nWcfCEA70OJKMHRbP+OBKPUJVD2qRgfnDcmZuV99SzynKrRLot0faA==
+  dependencies:
+    "@vercel/webpack-asset-relocator-loader" "1.4.1"
 
 "@types/cacheable-request@^6.0.1":
   version "6.0.2"
@@ -1374,6 +1374,11 @@
   dependencies:
     "@typescript-eslint/types" "4.28.2"
     eslint-visitor-keys "^2.0.0"
+
+"@vercel/webpack-asset-relocator-loader@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@vercel/webpack-asset-relocator-loader/-/webpack-asset-relocator-loader-1.4.1.tgz#c55fc0f46503b99a6f2321380c9b0f44b4faa703"
+  integrity sha512-p0P5sSfzhZ0HkNgvtOKs62cOZCK6avE28A8fEIE5vpKkhPXOlcXFtbUmIOqH3jYC4CjLOqwTU48cx3ewkGKQ9g==
 
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
@@ -7738,11 +7743,6 @@ source-map@~0.7.2:
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
   integrity sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==
-
-sourcemap-codec@^1.4.4:
-  version "1.4.8"
-  resolved "https://registry.yarnpkg.com/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz#ea804bd94857402e6992d05a38ef1ae35a9ab4c4"
-  integrity sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==
 
 spdx-correct@^3.0.0:
   version "3.1.1"
