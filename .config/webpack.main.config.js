@@ -1,4 +1,5 @@
 /* eslint @typescript-eslint/no-var-requires: "off" */
+const plugins = require("./webpack.main.plugins");
 
 module.exports = {
   /**
@@ -14,4 +15,6 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
   },
+
+  plugins: plugins,
 };
