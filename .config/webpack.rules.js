@@ -43,40 +43,17 @@ module.exports = [
     },
   },
 
-  // SVGs
+  // Assets
   {
-    test: /\.svg$/,
-    use: [
-      {
-        loader: "svg-url-loader",
-        options: {
-          limit: 10000,
-        },
-      },
-    ],
-  },
-
-  // Images
-  {
-    test: /\.(png|jpe?g|gif)$/i,
-    loader: "file-loader",
-    options: {
-      name: "[path][name].[ext]",
+    test: /\.(png|svg|jpg|jpeg|gif|woff|woff2|eot|ttf|otf)$/i,
+    type: "asset",
+    generator: {
+      filename: "assets/[hash][ext]",
     },
-  },
-
-  // Fonts
-  {
-    test: /\.(ttf|otf|eot|woff2|woff)$/,
-    use: [
-      {
-        loader: "file-loader",
-        options: {
-          name: "[path][name].[ext]",
-          publicPath: "../",
-          context: ".src",
-        },
+    parser: {
+      dataUrlCondition: {
+        maxSize: 4 * 1024, // 4 KB
       },
-    ],
+    },
   },
 ];
