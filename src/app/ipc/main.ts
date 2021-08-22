@@ -9,11 +9,11 @@ ipcMain.on("minimize-app", () => {
     app.hide();
     return;
   }
-  BrowserWindow.getFocusedWindow().minimize();
+  BrowserWindow.getFocusedWindow()?.minimize();
 });
 
 ipcMain.on("maximize-app", () => {
-  BrowserWindow.getFocusedWindow().maximize();
+  BrowserWindow.getFocusedWindow()?.maximize();
 });
 
 ipcMain.on("relaunch-app", () => {
