@@ -48,7 +48,7 @@ module.exports = [
     test: /\.(png|svg|jpg|jpeg|gif|woff|woff2|eot|ttf|otf)$/i,
     type: "asset",
     generator: {
-      filename: "assets/[hash][ext]",
+      filename: "assets/[hash].[ext]",
     },
     parser: {
       dataUrlCondition: {
