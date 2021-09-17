@@ -11,6 +11,7 @@ import {
 } from "redux-persist";
 import countReducer from "./reducers/count";
 import charReducer from "./reducers/characters";
+import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 
 // Persistance Config for redux-persist
 const persistConfig = {
@@ -52,6 +53,12 @@ export const store = configureStore({
       },
     }),
 });
+
+// Use throughout your app instead of plain `useDispatch` and `useSelector`
+export const useAppDispatch = () => useDispatch<typeof store.dispatch>();
+export const useAppSelector: TypedUseSelectorHook<
+  ReturnType<typeof store.getState>
+> = useSelector;
 
 // Make the store persistent
 export const persistor = persistStore(store);

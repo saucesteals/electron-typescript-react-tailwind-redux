@@ -1,6 +1,5 @@
-import { store } from "@redux/index";
+import { store, useAppSelector } from "@redux/index";
 import ReactLogo from "@assets/icons/react.svg";
-import { useSelector } from "react-redux";
 import { useState } from "react";
 import { incrementCounter, decrementCounter } from "@redux/reducers/count";
 import { incrementChar, decrementChar } from "@redux/reducers/characters";
@@ -8,7 +7,7 @@ import { incrementChar, decrementChar } from "@redux/reducers/characters";
 const HomePage = () => {
   const [show, setShow] = useState(true);
 
-  const currentState = useSelector((state) => state);
+  const state = useAppSelector((state) => state);
 
   const increment = () => {
     store.dispatch(incrementChar());
@@ -60,7 +59,7 @@ const HomePage = () => {
 
       {show ? (
         <pre className="bg-blue-500 p-4 text-center rounded-md m-5">
-          {JSON.stringify(currentState)}
+          {JSON.stringify(state)}
         </pre>
       ) : null}
 
