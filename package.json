@@ -86,7 +86,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^5.0.0",
     "dotenv": "^10.0.0",
-    "electron": "13.1.6",
+    "electron": "13.3.0",
     "electron-icon-builder": "^2.0.1",
     "eslint": "^7.6.0",
     "eslint-import-resolver-typescript": "^2.4.0",
