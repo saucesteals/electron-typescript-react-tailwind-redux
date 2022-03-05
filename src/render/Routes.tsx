@@ -1,4 +1,8 @@
-import { Switch, Route, HashRouter as Router } from "react-router-dom";
+import {
+  Route,
+  HashRouter as Router,
+  Routes as Switch,
+} from "react-router-dom";
 import RouterPaths from "@/render/utils/routes.json";
 import HomePage from "@/render/containers/HomePage";
 
@@ -7,8 +11,8 @@ const Routes = () => {
     <>
       <Router>
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path={RouterPaths.HOME} component={HomePage} />
+          <Route caseSensitive path="/" element={<HomePage />} />
+          <Route caseSensitive path={RouterPaths.HOME} element={<HomePage />} />
         </Switch>
       </Router>
     </>
