@@ -1,13 +1,13 @@
 # electron-typescript-react-tailwind-redux
 
-> A secure, modular, and easy to use [Electron Forge](https://www.electronforge.io/) boilerplate featuring [Typescript](https://www.typescriptlang.org/), [React](https://reactjs.org/), [Webpack](https://webpack.js.org/), [TailwindCSS](https://tailwindcss.com/), [Redux](https://redux.js.org/) and [persistance](https://github.com/saucesteals/electron-persist-secure) (with [redux-persist](https://github.com/rt2zz/redux-persist) support) 
-
+> A secure, modular, and easy to use [Electron Forge](https://www.electronforge.io/) boilerplate featuring [Typescript](https://www.typescriptlang.org/), [React](https://reactjs.org/), [Webpack](https://webpack.js.org/), [TailwindCSS](https://tailwindcss.com/), [Redux](https://redux.js.org/) and [persistance](https://github.com/saucesteals/electron-persist-secure) (with [redux-persist](https://github.com/rt2zz/redux-persist) support)
 
 ---
 
 ### **Installation**
 
 Clone the repository locally with **none** of its git history
+
 ```sh
 $ git clone --depth 1 --single-branch https://github.com/saucesteals/electron-typescript-react-tailwind-redux.git your-project-name
 
@@ -15,6 +15,7 @@ $ cd your-project-name
 
 $ yarn
 ```
+
 ### **OR**
 
 Generate a GitHub repository with the [Use this template](https://github.com/saucesteals/electron-typescript-react-tailwind-redux/generate) button above
@@ -27,12 +28,12 @@ $ cd your-project-name
 $ yarn
 ```
 
-
 ---
 
 ### **Starting Development**
 
 Start the app in the `dev` environment:
+
 ```sh
 yarn start
 ```
@@ -40,8 +41,11 @@ yarn start
 ---
 
 ### **Packaging for Production**
+
 To package apps into a local executable:
+
 - Personalize the forge **maker** configs at `/.config/forge.config.js`
+
 ```sh
 yarn make:win
 # yarn make:mac
@@ -51,9 +55,11 @@ yarn make:win
 ---
 
 ### **Releasing with GitHub**
+
 1. Copy the contents of `env.example` to `.env` (Copy into a blank one if you dont already have one)
-2. Set your `GH_TOKEN` 
+2. Set your `GH_TOKEN`
 3. Personalize the forge **publisher** configs at `/.config/forge.config.js`
+
 ```sh
 yarn publish:win
 # yarn publish:mac
@@ -66,9 +72,11 @@ yarn publish:win
 
 1. Ensure that you have a high quality `source.png` icon in your `/assets/package` folder
 2. Run:
+
 ```sh
 yarn create-icons
 ```
+
 3. Check your new icons in `/assets/package/icons`
 
 ---
@@ -100,12 +108,12 @@ yarn create-icons
 
     ... # add on bridges in other files or include them in index.ts
         # make sure to import any new bridge files in the preload
-        
+
   - /app # backend code
     - /ipc # ipcRenderer -> ipcMain listeners
       - main.ts # main functionality ipc listeners
                 # ex. quit/hide
-              
+
       ...       # add on as u go
                 # make sure to add imports to new ipc files
                 # in the main electron entry
@@ -120,10 +128,10 @@ yarn create-icons
 
     - Routes.tsx # react-router routes
 
-    - App.tsx # Export entire app with routes components 
+    - App.tsx # Export entire app with routes components
               # and redux provider if you are using it
 
-    - 
+    -
 
   main.ts # main "backend" electron entry
 
@@ -136,6 +144,7 @@ yarn create-icons
 ---
 
 ### **Contributing**
+
 When contributing to this repository, please first discuss the change you wish to make via an issue.
 
 1. Fork the Project
@@ -144,9 +153,9 @@ When contributing to this repository, please first discuss the change you wish t
 4. Push to the Branch (**git push origin feature/AmazingFeature**)
 5. Open a Pull Request and leave some comments!
 
-
 ---
 
 ### **Maintainers**
-* [Noah (wadu)](https://github.com/fourwadu/)
-* [Daniel (sauce)](https://github.com/saucesteals/)
+
+- [Noah (wadu)](https://github.com/fourwadu/)
+- [Daniel (sauce)](https://github.com/saucesteals/)

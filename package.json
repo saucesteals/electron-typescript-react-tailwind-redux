@@ -6,7 +6,8 @@
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
-    "lint": "cross-env NODE_ENV=development eslint . --cache --ext .js,.jsx,.ts,.tsx",
+    "lint": "cross-env NODE_ENV=development eslint",
+    "format": "prettier --ignore-path .eslintignore --write",
     "prepare": "husky install .config/husky",
     "commit": "cz",
     "create-icons": "electron-icon-builder --input=./assets/package/source.png --output=./assets/package",
@@ -49,16 +50,17 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "cross-env NODE_ENV=development eslint --cache"
+      "yarn lint",
+      "yarn prettier"
     ],
     "{*.json,.{eslintrc,prettierrc}}": [
-      "prettier --ignore-path .eslintignore --parser json --write"
+      "yarn prettier"
     ],
     "*.{css,scss}": [
-      "prettier --ignore-path .eslintignore --write"
+      "yarn prettier"
     ],
     "*.{html,md,yml}": [
-      "prettier --ignore-path .eslintignore  --write"
+      "yarn prettier"
     ]
   },
   "devDependencies": {
@@ -93,9 +95,11 @@
     "eslint-plugin-import": "^2.25.4",
     "fork-ts-checker-webpack-plugin": "^7.2.1",
     "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
     "node-loader": "^2.0.0",
     "postcss": "^8.4.7",
     "postcss-loader": "^6.2.1",
+    "prettier": "^2.6.0",
     "style-loader": "^3.3.1",
     "tailwindcss": "^3.0.23",
     "ts-loader": "^9.2.7",
