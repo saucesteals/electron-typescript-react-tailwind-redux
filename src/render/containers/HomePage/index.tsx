@@ -55,15 +55,6 @@ const HomePage = () => {
         >
           <strong>Noah</strong>
         </div>
-        &nbsp;&&nbsp;
-        <div
-          className="cursor-pointer hover:text-blue-400 hover:underline"
-          onClick={() =>
-            window.electron.openUrl("https://github.com/arifali123/")
-          }
-        >
-          <strong>Arif</strong>
-        </div>
       </div>
 
       {show ? (
